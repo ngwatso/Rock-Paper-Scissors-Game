@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Monofett&family=Patrick+Hand&family=Yatra+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Monofett&family=Patrick+Hand&family=Yatra+One&display=swap");
 
 html,
 body,
@@ -118,7 +118,10 @@ a {
 }
 
 body {
-  font-family: "Monofett", cursive;
+  height: 100vh;
+  color: #8a2be2;
+  font-family: "Bungee Inline", cursive;
+  font-size: 1.6rem;
   background: rgb(4, 4, 8);
   background: linear-gradient(
     180deg,
@@ -129,10 +132,18 @@ body {
 }
 
 header {
+  font-family: "Monofett", cursive;
   text-align: center;
 }
 
 h1 {
   font-size: 10rem;
-  color: #8a2be2;
+}
+
+.scoreboard {
+  width: 100vw;
+  height: 20vh;
+  margin: 5% 0;
+  border: 0.5rem solid #8a2be2;
+  text-align: center;
 }
