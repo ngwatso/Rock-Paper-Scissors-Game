@@ -152,7 +152,6 @@ h2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* border: 0.5rem solid #8a2be2; */
   text-align: center;
 }
 
@@ -169,3 +168,11 @@ h2 {
   border-radius: 2rem;
   font-size: 5rem;
 }
+
+.message {
+  width: 100vw;
+  font-size: 6rem;
+  text-align: center;
+}
+
+
