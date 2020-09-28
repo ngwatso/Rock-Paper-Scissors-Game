@@ -114,15 +114,17 @@ html {
 
 a {
   width: 25%;
-  margin: 0 5%;
+  margin: 0 5% 5% 0;
   text-align: center;
+  /* border: 1px solid white; */
 }
 
 nav {
   height: 30vh;
-  padding: 2%;
+  padding: 1%;
   display: flex;
-  align-items: space-around;
+  align-items: space-between;
+  /* border: 1px solid white; */
 }
 body {
   height: 100vh;
@@ -187,6 +189,19 @@ img {
   max-height: 100%;
 }
 
+.image {
+  vertical-align: top;
+  text-align: center;
+  margin: 0 5%;
+}
+
+span {
+  display: block;
+  font-size: 3rem;
+  text-align: center;
+  /* border: 1px solid white; */
+}
+
 #paper {
   transform: rotate(90deg);
   padding: 1%;
@@ -197,6 +212,7 @@ img {
 #scissors {
   transform: rotate(90deg);
   padding: 1%;
+  margin-left: 25%;
   border: 0.5rem solid #8a2be2;
   border-radius: 5rem;
 }
@@ -206,4 +222,16 @@ img {
   padding: 1%;
   border: 0.5rem solid #8a2be2;
   border-radius: 7rem;
+}
+
+#sciss {
+  padding-left: 20%;
+}
+
+#pap {
+  padding-right: 5%;
+}
+
+#roc {
+  padding-right: 5%;
 }
