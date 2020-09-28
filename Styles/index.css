@@ -126,6 +126,7 @@ nav {
   align-items: space-between;
   /* border: 1px solid white; */
 }
+
 body {
   height: 100vh;
   color: #8a2be2;
@@ -209,6 +210,10 @@ span {
   border-radius: 5rem;
 }
 
+#paper:hover {
+  transform: translate(2rem, -2rem) rotate(100deg);
+}
+
 #scissors {
   transform: rotate(90deg);
   padding: 1%;
@@ -217,11 +222,19 @@ span {
   border-radius: 5rem;
 }
 
+#scissors:hover {
+  transform: translate(2rem, -2rem) rotate(100deg);
+}
+
 #rock {
   transform: scale(0.7);
   padding: 1%;
   border: 0.5rem solid #8a2be2;
   border-radius: 7rem;
+}
+
+#rock:hover {
+  transform: scale(0.7) translate(2rem, -2rem) rotate(10deg);
 }
 
 #sciss {
@@ -234,4 +247,24 @@ span {
 
 #roc {
   padding-right: 5%;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  60%,
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  40% {
+    -webkit-transform: translateY(-2rem);
+    transform: translateY(-2rem);
+  }
+
+  80% {
+    -webkit-transform: translateY(-1rem);
+    transform: translateY(-1rem);
+  }
 }
