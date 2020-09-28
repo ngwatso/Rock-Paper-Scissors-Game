@@ -248,23 +248,3 @@ span {
 #roc {
   padding-right: 5%;
 }
-
-@keyframes bounce {
-  0%,
-  20%,
-  60%,
-  100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-
-  40% {
-    -webkit-transform: translateY(-2rem);
-    transform: translateY(-2rem);
-  }
-
-  80% {
-    -webkit-transform: translateY(-1rem);
-    transform: translateY(-1rem);
-  }
-}
