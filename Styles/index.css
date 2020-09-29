@@ -211,7 +211,7 @@ span {
 }
 
 #paper:hover {
-  transform: translate(2rem, -2rem) rotate(100deg);
+  transform: translate(0rem, -5rem) rotate(100deg);
 }
 
 #scissors {
@@ -223,7 +223,7 @@ span {
 }
 
 #scissors:hover {
-  transform: translate(2rem, -2rem) rotate(100deg);
+  transform: translate(0rem, -5rem) rotate(100deg);
 }
 
 #rock {
@@ -234,7 +234,7 @@ span {
 }
 
 #rock:hover {
-  transform: scale(0.7) translate(2rem, -2rem) rotate(10deg);
+  transform: scale(0.7) translate(0rem, -5rem) rotate(10deg);
 }
 
 #sciss {

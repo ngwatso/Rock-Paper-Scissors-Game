@@ -1,3 +1,25 @@
+const userScore = 0;
+const compScore = 0;
+const userScore_div = document.getElementById("player");
+const compScore_div = document.getElementById("computer");
+const scoreBoard_div = document.querySelector(".scoreboard");
+const message_div = document.querySelector(".message");
+const rock_a = document.getElementById(".rock");
+const paper_a = document.getElementById(".paper");
+const scissors_a = document.getElementById(".scissors");
+
+rock_a.addEventListener("click", function () {
+  console.log("Hey, you clicked on rock!");
+});
+
+paper_a.addEventListener("click", function () {
+  console.log("Hey, you clicked on paper!");
+});
+
+scissors_a.addEventListener("click", function () {
+  console.log("Hey, you clicked on scissors!");
+});
+
 function playerChoice(string) {
   let compChoice = Math.random();
 
