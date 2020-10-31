@@ -149,16 +149,16 @@ header {
 }
 
 h1 {
-   font-size: 10rem;
+   font-size: 3.5rem;
 }
 
 h2 {
-   font-size: 2.5rem;
+   font-size: 1.5rem;
 }
 
 .scoreboard {
-   width: 50vw;
-   height: 20vh;
+   width: 100vw;
+   height: 10%;
    margin: 3% auto;
    padding: 2%;
    display: flex;
@@ -168,30 +168,43 @@ h2 {
 }
 
 .units {
-   width: 25%;
+   width: 30%;
+   height: 95%;
+   margin: 50% 5% 0 5%;
    display: flex;
    flex-flow: column nowrap;
    justify-content: center;
+   align-items: space-around;
+   /* border: 1px solid white; */
 }
 
 .p-score {
-   height: 30%;
-   border: 0.5rem solid #8a2be2;
-   border-radius: 2rem;
-   font-size: 5rem;
+   height: 100%;
+   border: 0.25rem solid #8a2be2;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 1rem;
+   font-size: 3rem;
 }
 
 .c-score {
-   height: 30%;
-   border: 0.5rem solid #8a2be2;
-   border-radius: 2rem;
-   font-size: 5rem;
+   height: 100%;
+   border: 0.25rem solid #8a2be2;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 1rem;
+   font-size: 3rem;
 }
 
 .message {
+   margin-top: 50%;
    width: 100vw;
-   font-size: 4rem;
+   height: 25%;
+   font-size: 2rem;
    text-align: center;
+   /* border: 1px solid white; */
 }
 
 img {
@@ -203,58 +216,194 @@ img {
    height: 100%;
    vertical-align: top;
    text-align: center;
-   margin: 1% 5%;
+   margin: 0 5%;
 }
 
 .p-image {
    height: 100%;
    vertical-align: top;
    text-align: center;
-   margin: 1% 5%;
+   margin: 0 5%;
 }
 
 .s-image {
    height: 100%;
    vertical-align: top;
    text-align: center;
-   margin: 1% 5%;
+   margin: 0 5%;
 }
 
 span {
    display: block;
-   font-size: 3rem;
+   font-size: 1.25rem;
    text-align: center;
 }
 
 #paper {
    margin-top: 20%;
    padding: 3%;
-   border: 0.5rem solid #8a2be2;
-   border-radius: 3rem;
+   border: 0.25rem solid #8a2be2;
+   border-radius: 1rem;
 }
 
 #paper:hover {
-   transform: translate(0rem, -5rem) rotate(10deg);
+   transform: scale(1.25);
 }
 
 #scissors {
    margin-top: 20%;
    padding: 3%;
-   border: 0.5rem solid #8a2be2;
-   border-radius: 3rem;
+   border: 0.25rem solid #8a2be2;
+   border-radius: 1rem;
 }
 
 #scissors:hover {
-   transform: translate(0rem, -5rem) rotate(10deg);
+   transform: scale(1.25);
 }
 
 #rock {
    margin-top: 20%;
    padding: 3%;
-   border: 0.4rem solid #8a2be2;
-   border-radius: 3rem;
+   border: 0.25rem solid #8a2be2;
+   border-radius: 1rem;
 }
 
 #rock:hover {
-   transform: translate(0rem, -5rem) rotate(10deg);
+   transform: scale(1.25);
+}
+
+/* Media Queries */
+
+/* 540 */
+
+@media (min-width: 540px) {
+   h1 {
+      font-size: 5rem;
+   }
+
+   .scoreboard {
+      height: 25%;
+   }
+
+   .units {
+      margin-top: 30%;
+   }
+
+   .c-score,
+   .p-score {
+      font-size: 4rem;
+   }
+
+   .message {
+      margin-top: 25%;
+   }
+
+   nav {
+      height: 10%;
+   }
+
+   span {
+      font-size: 2rem;
+   }
+}
+
+/* 768 */
+
+@media (min-width: 768px) {
+   h1 {
+      font-size: 7rem;
+   }
+
+   .scoreboard {
+      height: 20%;
+   }
+
+   .units {
+      margin-top: 25%;
+   }
+
+   h2 {
+      font-size: 2.5rem;
+   }
+
+   .c-score,
+   .p-score {
+      font-size: 5rem;
+   }
+
+   .message {
+      margin-top: 20%;
+      font-size: 3rem;
+   }
+
+   span {
+      font-size: 3rem;
+   }
+
+   nav {
+      height: 10%;
+   }
+}
+
+/* 1024 */
+
+@media (min-width: 1024px) {
+   .scoreboard {
+      margin-top: 10%;
+      height: 15%;
+   }
+
+   .units {
+      width: 15%;
+      margin: 20% 15%;
+   }
+
+   .message {
+      margin-top: 10%;
+   }
+}
+
+/* 1200 */
+
+@media (min-width: 1200px) {
+   h1 {
+      font-size: 10rem;
+   }
+
+   .scoreboard {
+      margin-top: 5%;
+      height: 20%;
+   }
+
+   .units {
+      height: 95%;
+   }
+
+   .message {
+      margin-top: 5%;
+      height: 15%;
+      font-size: 4rem;
+   }
+
+   nav {
+      height: 15%;
+   }
+}
+
+/* 1500 */
+
+@media (min-width: 1500px) {
+   .scoreboard {
+      height: 25%;
+      margin-top: 3%;
+   }
+}
+
+.units {
+   margin: 0 20%;
+}
+
+.message {
+   margin-top: 3%;
+   font-size: 5rem;
 }
