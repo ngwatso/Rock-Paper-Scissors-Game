@@ -272,6 +272,21 @@ span {
    transform: scale(1.25);
 }
 
+.green-glow {
+   border: 1rem solid #4dcc7d;
+   box-shadow: 0 0 1rem #31b43a;
+}
+
+.red-glow {
+   border: 1rem solid #fc121b;
+   box-shadow: 0 0 1rem #d01115;
+}
+
+.gray-glow {
+   border: 1rem solid #464647;
+   box-shadow: 0 0 1rem #25292b;
+}
+
 /* Media Queries */
 
 /* 540 */

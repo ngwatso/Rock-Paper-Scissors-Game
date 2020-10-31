@@ -4,9 +4,9 @@ const userScore2 = document.querySelector(".p-score");
 const compScore2 = document.querySelector(".c-score");
 const scoreBoard = document.querySelector(".scoreboard");
 const message = document.querySelector(".message");
-const rock = document.querySelector(".r-image");
-const paper = document.querySelector(".p-image");
-const scissors = document.querySelector(".s-image");
+const rock = document.querySelector("#rock");
+const paper = document.querySelector("#paper");
+const scissors = document.querySelector("#scissors");
 
 function getUserChoice() {
   rock.addEventListener('click', function() {
@@ -59,24 +59,26 @@ function convert(letter)  {
   }
 }
 
-function win(user, computer) {
+function win(userChoice, computerChoice) {
   userScore++;
   userScore2.innerHTML = userScore;
   compScore2.innerHTML = compScore;
-  message.textContent = `You chose ${convert(user)}, Computer chose ${convert(computer)}, You Win!`
+  message.textContent = `You chose ${convert(userChoice)}, Computer chose ${convert(computerChoice)}, You Win!`
+  let user = document.getElementById(userChoice);
+  user.classList.add('green-glow');
 }
 
-function lose(user, computer) {
+function lose(userChoice, computerChoice) {
   compScore++;
   compScore2.innerHTML = compScore;
   userScore2.innerHTML = userScore;
-  message.textContent = `You chose ${convert(user)}, Computer chose ${convert(computer)}, You Lose!`
+  message.textContent = `You chose ${convert(userChoice)}, Computer chose ${convert(computerChoice)}, You Lose!`
 }
 
-function tie(user, computer) {
+function tie(userChoice, computerChoice) {
   compScore2.innerHTML = compScore;
   userScore2.innerHTML = userScore;
-  message.textContent = `You chose ${convert(user)}, Computer chose ${convert(computer)}, it's a Tie!`
+  message.textContent = `You chose ${convert(userChoice)}, Computer chose ${convert(computerChoice)}, it's a Tie!`
 }
 
 
