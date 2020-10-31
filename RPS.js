@@ -1,49 +1,88 @@
-const userScore = 0;
-const compScore = 0;
-const userScore_div = document.getElementById("player");
-const compScore_div = document.getElementById("computer");
-const scoreBoard_div = document.querySelector(".scoreboard");
-const message_div = document.querySelector(".message");
-const rock_a = document.getElementById(".rock");
-const paper_a = document.getElementById(".paper");
-const scissors_a = document.getElementById(".scissors");
+let userScore = 0;
+let compScore = 0;
+const userScore2 = document.querySelector(".p-score");
+const compScore2 = document.querySelector(".c-score");
+const scoreBoard = document.querySelector(".scoreboard");
+const message = document.querySelector(".message");
+const rock = document.querySelector(".r-image");
+const paper = document.querySelector(".p-image");
+const scissors = document.querySelector(".s-image");
 
-rock_a.addEventListener("click", function () {
-  console.log("Hey, you clicked on rock!");
-});
+function getUserChoice() {
+  rock.addEventListener('click', function() {
+    game("r");
+  })
+  
+  paper.addEventListener('click', function() {
+    game("p");
+  })
+  
+  scissors.addEventListener('click', function() {
+    game("s");
+  })
+}
 
-paper_a.addEventListener("click", function () {
-  console.log("Hey, you clicked on paper!");
-});
+function getComputerChoice() {
+  const choice = ['r', 'p', 's'];
+  const random = Math.floor(Math.random() * 3);
+  return choice[random];
+}
 
-scissors_a.addEventListener("click", function () {
-  console.log("Hey, you clicked on scissors!");
-});
-
-function playerChoice(string) {
-  let compChoice = Math.random();
-
-  if (string === "rock" && compChoice >= 0.6667) {
-    return "You chose rock, the computer chose scissors, you win!";
-  } else if (string === "rock" && compChoice >= 0.3333) {
-    return "You chose rock, the computer chose paper, you lose!";
-  } else if (string === "rock" && compChoice < 0.3333) {
-    return "You chose rock, the computer chose rock, it's a tie!";
-  } else if (string === "paper" && compChoice >= 0.6667) {
-    return "You chose paper, the computer chose scissors, you lose!";
-  } else if (string === "paper" && compChoice >= 0.3333) {
-    return "You chose paper, the computer chose paper, it's a tie!";
-  } else if (string === "paper" && compChoice < 0.3333) {
-    return "You chose paper, the computer chose rock, you win!";
-  } else if (string === "scissors" && compChoice >= 0.6667) {
-    return "You chose scissors, the computer chose scissors, it's a tie!";
-  } else if (string === "scissors" && compChoice >= 0.3333) {
-    return "You chose scissors, the computer chose paper, you win!";
-  } else if (string === "scissors" && compChoice < 0.3333) {
-    return "You chose scissors, the computer chose rock, you lose!";
-  } else {
-    return "Choose rock, paper or scissors!";
+function game(userChoice) {
+  const computerChoice = getComputerChoice();
+  switch (userChoice + computerChoice) {
+    case "rs":
+    case "pr":
+    case "sp":
+      win(userChoice, computerChoice);
+      break;
+    case "rp":
+    case "ps":
+    case "sr":
+      lose(userChoice, computerChoice);
+      break;
+    case "rr":
+    case "pp":
+    case "ss":
+      tie(userChoice, computerChoice);
+      break;
   }
 }
 
-console.log(playerChoice("scissors"));
+function convert(letter)  {
+  if(letter === "r") {
+    return "Rock";
+  } else if (letter === "p") {
+    return "Paper";
+  } else {
+    return "Scissors";
+  }
+}
+
+function win(user, computer) {
+  userScore++;
+  userScore2.innerHTML = userScore;
+  compScore2.innerHTML = compScore;
+  message.textContent = `You chose ${convert(user)}, Computer chose ${convert(computer)}, You Win!`
+}
+
+function lose(user, computer) {
+  compScore++;
+  compScore2.innerHTML = compScore;
+  userScore2.innerHTML = userScore;
+  message.textContent = `You chose ${convert(user)}, Computer chose ${convert(computer)}, You Lose!`
+}
+
+function tie(user, computer) {
+  compScore2.innerHTML = compScore;
+  userScore2.innerHTML = userScore;
+  message.textContent = `You chose ${convert(user)}, Computer chose ${convert(computer)}, it's a Tie!`
+}
+
+
+
+
+
+
+console.log(getUserChoice());
+// message.textContent = player();
